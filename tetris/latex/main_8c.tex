@@ -1,0 +1,369 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+main part of the code  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sdl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debugging.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}load\+\_\+graphics.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structttm}{ttm}
+\begin{DoxyCompactList}\small\item\em structure for tetriminos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_aed89bd71aee8be823e8a20ec4e093c1e}\label{main_8c_aed89bd71aee8be823e8a20ec4e093c1e}} 
+\#define {\bfseries H\+E\+I\+G\+HT}~18
+\item 
+\mbox{\Hypertarget{main_8c_a241aeeb764887ae5e3de58b98f04b16d}\label{main_8c_a241aeeb764887ae5e3de58b98f04b16d}} 
+\#define {\bfseries W\+I\+D\+TH}~12
+\item 
+\mbox{\Hypertarget{main_8c_a5394435edf20efdffac70b5c362ade81}\label{main_8c_a5394435edf20efdffac70b5c362ade81}} 
+\#define {\bfseries B\+L\+K\+\_\+\+S\+I\+ZE}~32
+\item 
+\mbox{\Hypertarget{main_8c_a6974d08a74da681b3957b2fead2608b8}\label{main_8c_a6974d08a74da681b3957b2fead2608b8}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}~B\+L\+K\+\_\+\+S\+I\+ZE $\ast$ H\+E\+I\+G\+HT
+\item 
+\mbox{\Hypertarget{main_8c_a2cd109632a6dcccaa80b43561b1ab700}\label{main_8c_a2cd109632a6dcccaa80b43561b1ab700}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}~B\+L\+K\+\_\+\+S\+I\+ZE $\ast$ W\+I\+D\+TH
+\item 
+\mbox{\Hypertarget{main_8c_a316524eb48cf16cba5db0dd2e1c6a827}\label{main_8c_a316524eb48cf16cba5db0dd2e1c6a827}} 
+\#define {\bfseries T\+T\+M\+\_\+\+W\+I\+D\+TH}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_afc06c12631b3b00efa5659b921e9fdaa}\label{main_8c_afc06c12631b3b00efa5659b921e9fdaa}} 
+int {\bfseries set\+Back\+Color} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, S\+D\+L\+\_\+\+Color color)
+\item 
+int \hyperlink{main_8c_ada4dde753d303013ded20363eb1f9be9}{can\+Print} (char mat\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}, int row, int col)
+\begin{DoxyCompactList}\small\item\em Determines ability to print tetrimino. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a9c0090634c39398bd8865043616f6915}{rotate\+Cur} (void)
+\begin{DoxyCompactList}\small\item\em rotate current tetrimino \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a3a6ff3f3cf987dfe7ef29c8150d94dc5}{whole\+Line} (int row)
+\begin{DoxyCompactList}\small\item\em determines if line is whole \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_acf4ebdb374829d8d913a822fcd73031f}{rand\+Ttm} (void)
+\begin{DoxyCompactList}\small\item\em change current tetrimino to a random tetrimino \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_ae9692ec823f821130e4efaa40a72a2cb}{print\+Ttm} (char mat\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}, int row, int col)
+\begin{DoxyCompactList}\small\item\em put a tetrimino in the board \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_aa6c6b91b693075c8ae01385351cdc971}\label{main_8c_aa6c6b91b693075c8ae01385351cdc971}} 
+void \hyperlink{main_8c_aa6c6b91b693075c8ae01385351cdc971}{down\+Ttm} (void)
+\begin{DoxyCompactList}\small\item\em down current tetrimino from 1 row \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a73c634b9e4f572e8c8a6843ab19640ca}\label{main_8c_a73c634b9e4f572e8c8a6843ab19640ca}} 
+void \hyperlink{main_8c_a73c634b9e4f572e8c8a6843ab19640ca}{full\+Down\+Ttm} (void)
+\begin{DoxyCompactList}\small\item\em down current tetrimino at the bottom \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a3f1fb9940a8904e21137a65f45cb9436}{move\+Ttm} (int direction)
+\begin{DoxyCompactList}\small\item\em move current tetrimino to left or right \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a3d150ccfeb33959cda572f9cda9e6d80}{remove\+Line} (int row)
+\begin{DoxyCompactList}\small\item\em Removes blocks from line and down the above ones. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_ab59b086c41d506e55aa02729f9916be2}{refresh\+Screen} (void)
+\begin{DoxyCompactList}\small\item\em refresh screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a27113921347a82199b52e4f2ee16985c}\label{main_8c_a27113921347a82199b52e4f2ee16985c}} 
+void \hyperlink{main_8c_a27113921347a82199b52e4f2ee16985c}{game} (void)
+\begin{DoxyCompactList}\small\item\em the place that contains game loop \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_ac482f340f2b07e8a8e3432558beca16f}\label{main_8c_ac482f340f2b07e8a8e3432558beca16f}} 
+int {\bfseries init} (S\+D\+L\+\_\+\+Window $\ast$window)
+\item 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char {\bfseries I\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries L\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries J\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries T\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries O\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries Z\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+char {\bfseries S\+Ttm} \mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_ae18ac556fad863e56fdff8263c2b93f0}\label{main_8c_ae18ac556fad863e56fdff8263c2b93f0}} 
+S\+D\+L\+\_\+\+Color {\bfseries white} = \{ 255, 255, 255, 255 \}
+\item 
+\mbox{\Hypertarget{main_8c_a0171f2945adf504f88fedaf624abfc6e}\label{main_8c_a0171f2945adf504f88fedaf624abfc6e}} 
+S\+D\+L\+\_\+\+Color {\bfseries black} = \{ 0, 0, 0, 0 \}
+\item 
+\mbox{\Hypertarget{main_8c_af9dca46b01a2804b8730516485296199}\label{main_8c_af9dca46b01a2804b8730516485296199}} 
+struct \hyperlink{structttm}{ttm} {\bfseries cur\+Ttm}
+\item 
+\mbox{\Hypertarget{main_8c_a27fdc41ce6ab40ec765e80ccbdbbee59}\label{main_8c_a27fdc41ce6ab40ec765e80ccbdbbee59}} 
+char {\bfseries board} \mbox{[}H\+E\+I\+G\+HT\mbox{]}\mbox{[}W\+I\+D\+TH\mbox{]} = \{ 0 \}
+\item 
+\mbox{\Hypertarget{main_8c_ad8bbfd2bf84211ba3735476bf37a0826}\label{main_8c_ad8bbfd2bf84211ba3735476bf37a0826}} 
+long {\bfseries score} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a04de29e8773420834a86eb73e5ac07bf}\label{main_8c_a04de29e8773420834a86eb73e5ac07bf}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries B\+LK}
+\item 
+\mbox{\Hypertarget{main_8c_a966da7a60c4ea3ba301e26ccc5efe452}\label{main_8c_a966da7a60c4ea3ba301e26ccc5efe452}} 
+S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries renderer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main part of the code 
+
+\char`\"{}ttm\char`\"{} is an abbreviation for \char`\"{}tetrimino\char`\"{}. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ada4dde753d303013ded20363eb1f9be9}\label{main_8c_ada4dde753d303013ded20363eb1f9be9}} 
+\index{main.\+c@{main.\+c}!can\+Print@{can\+Print}}
+\index{can\+Print@{can\+Print}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{can\+Print()}{canPrint()}}
+{\footnotesize\ttfamily int can\+Print (\begin{DoxyParamCaption}\item[{char}]{mat\mbox{[}\+T\+T\+M\+\_\+\+W\+I\+D\+T\+H\mbox{]}\mbox{[}\+T\+T\+M\+\_\+\+W\+I\+D\+T\+H\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Determines ability to print tetrimino. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em mat} & The matrix of the tetrimino \\
+\hline
+\mbox{\tt in}  & {\em row} & The row of the tetrimino \\
+\hline
+\mbox{\tt in}  & {\em col} & The column of the tetrimino\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if able to print, 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a3f1fb9940a8904e21137a65f45cb9436}\label{main_8c_a3f1fb9940a8904e21137a65f45cb9436}} 
+\index{main.\+c@{main.\+c}!move\+Ttm@{move\+Ttm}}
+\index{move\+Ttm@{move\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{move\+Ttm()}{moveTtm()}}
+{\footnotesize\ttfamily void move\+Ttm (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+move current tetrimino to left or right 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em direction} & The direction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_ae9692ec823f821130e4efaa40a72a2cb}\label{main_8c_ae9692ec823f821130e4efaa40a72a2cb}} 
+\index{main.\+c@{main.\+c}!print\+Ttm@{print\+Ttm}}
+\index{print\+Ttm@{print\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{print\+Ttm()}{printTtm()}}
+{\footnotesize\ttfamily int print\+Ttm (\begin{DoxyParamCaption}\item[{char}]{mat\mbox{[}\+T\+T\+M\+\_\+\+W\+I\+D\+T\+H\mbox{]}\mbox{[}\+T\+T\+M\+\_\+\+W\+I\+D\+T\+H\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+put a tetrimino in the board 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mat} & The matrix of the ttm \\
+\hline
+\mbox{\tt in}  & {\em row} & The row in board \\
+\hline
+\mbox{\tt in}  & {\em col} & The col in board\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if it\textquotesingle{}s not possible to print the ttm, 0 else 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_acf4ebdb374829d8d913a822fcd73031f}\label{main_8c_acf4ebdb374829d8d913a822fcd73031f}} 
+\index{main.\+c@{main.\+c}!rand\+Ttm@{rand\+Ttm}}
+\index{rand\+Ttm@{rand\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{rand\+Ttm()}{randTtm()}}
+{\footnotesize\ttfamily int rand\+Ttm (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+change current tetrimino to a random tetrimino 
+
+\begin{DoxyReturn}{Returns}
+0 if current tetrimino successfully changed, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_ab59b086c41d506e55aa02729f9916be2}\label{main_8c_ab59b086c41d506e55aa02729f9916be2}} 
+\index{main.\+c@{main.\+c}!refresh\+Screen@{refresh\+Screen}}
+\index{refresh\+Screen@{refresh\+Screen}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{refresh\+Screen()}{refreshScreen()}}
+{\footnotesize\ttfamily void refresh\+Screen (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+refresh screen 
+
+remove everything from screen, refresh with content of {\itshape board} matrix, put current tetrimino at right place \mbox{\Hypertarget{main_8c_a3d150ccfeb33959cda572f9cda9e6d80}\label{main_8c_a3d150ccfeb33959cda572f9cda9e6d80}} 
+\index{main.\+c@{main.\+c}!remove\+Line@{remove\+Line}}
+\index{remove\+Line@{remove\+Line}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{remove\+Line()}{removeLine()}}
+{\footnotesize\ttfamily void remove\+Line (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Removes blocks from line and down the above ones. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em row} & The line \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a9c0090634c39398bd8865043616f6915}\label{main_8c_a9c0090634c39398bd8865043616f6915}} 
+\index{main.\+c@{main.\+c}!rotate\+Cur@{rotate\+Cur}}
+\index{rotate\+Cur@{rotate\+Cur}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{rotate\+Cur()}{rotateCur()}}
+{\footnotesize\ttfamily int rotate\+Cur (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+rotate current tetrimino 
+
+\begin{DoxyReturn}{Returns}
+0 if current tetrimino successfully rotated, 1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a3a6ff3f3cf987dfe7ef29c8150d94dc5}\label{main_8c_a3a6ff3f3cf987dfe7ef29c8150d94dc5}} 
+\index{main.\+c@{main.\+c}!whole\+Line@{whole\+Line}}
+\index{whole\+Line@{whole\+Line}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{whole\+Line()}{wholeLine()}}
+{\footnotesize\ttfamily int whole\+Line (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+determines if line is whole 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em row} & The line in the board\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the line is whole, 0 otherwise 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a6e38d59b67e2f07ef7d581846d45eca1}\label{main_8c_a6e38d59b67e2f07ef7d581846d45eca1}} 
+\index{main.\+c@{main.\+c}!I\+Ttm@{I\+Ttm}}
+\index{I\+Ttm@{I\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{I\+Ttm}{ITtm}}
+{\footnotesize\ttfamily char I\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 0, 1, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_a92d0ffad508747d28c97c8007bed3c72}\label{main_8c_a92d0ffad508747d28c97c8007bed3c72}} 
+\index{main.\+c@{main.\+c}!J\+Ttm@{J\+Ttm}}
+\index{J\+Ttm@{J\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{J\+Ttm}{JTtm}}
+{\footnotesize\ttfamily char J\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 1, 1, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_ab78ffd76f6017442947eb891b33d9000}\label{main_8c_ab78ffd76f6017442947eb891b33d9000}} 
+\index{main.\+c@{main.\+c}!L\+Ttm@{L\+Ttm}}
+\index{L\+Ttm@{L\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{L\+Ttm}{LTtm}}
+{\footnotesize\ttfamily char L\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 1, 0, 0 \},
+    \{ 0, 1, 0, 0 \},
+    \{ 0, 1, 1, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_a644758571e4dd81bd24a2d795539aa8e}\label{main_8c_a644758571e4dd81bd24a2d795539aa8e}} 
+\index{main.\+c@{main.\+c}!O\+Ttm@{O\+Ttm}}
+\index{O\+Ttm@{O\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{O\+Ttm}{OTtm}}
+{\footnotesize\ttfamily char O\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 1, 1, 0 \},
+    \{ 0, 1, 1, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_a2080aa159a7afae0a3a2743aa111b8e0}\label{main_8c_a2080aa159a7afae0a3a2743aa111b8e0}} 
+\index{main.\+c@{main.\+c}!S\+Ttm@{S\+Ttm}}
+\index{S\+Ttm@{S\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{S\+Ttm}{STtm}}
+{\footnotesize\ttfamily char S\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 1, 1, 0 \},
+    \{ 1, 1, 0, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_ae14f1ce4231842d0848eb69d7dbc8a6e}\label{main_8c_ae14f1ce4231842d0848eb69d7dbc8a6e}} 
+\index{main.\+c@{main.\+c}!T\+Ttm@{T\+Ttm}}
+\index{T\+Ttm@{T\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+Ttm}{TTtm}}
+{\footnotesize\ttfamily char T\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 1, 1, 1 \},
+    \{ 0, 0, 1, 0 \},
+    \{ 0, 0, 0, 0 \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_adaa3c91ca1c46e50586aab7f34760b60}\label{main_8c_adaa3c91ca1c46e50586aab7f34760b60}} 
+\index{main.\+c@{main.\+c}!Z\+Ttm@{Z\+Ttm}}
+\index{Z\+Ttm@{Z\+Ttm}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Ttm}{ZTtm}}
+{\footnotesize\ttfamily char Z\+Ttm\mbox{[}$\,$\mbox{]}\mbox{[}T\+T\+M\+\_\+\+W\+I\+D\+TH\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 0, 0, 0 \},
+    \{ 0, 1, 1, 0 \},
+    \{ 0, 0, 1, 1 \}
+\}
+\end{DoxyCode}
